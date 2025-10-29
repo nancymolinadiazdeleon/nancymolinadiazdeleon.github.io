@@ -1,0 +1,600 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Inter', sans-serif;
+     background: #f9fafb;
+     color: #111827;
+ }
+
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 2rem;
+     background: #c1c1c1;
+     border-bottom: 1px solid #e5e7eb;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ header h1 {
+     font-size: 28px;
+     font-weight: 700;
+     color: #111827;
+     width: 176px;
+ }
+
+ header h1 span {
+     font-family: 'Times New Roman', Times, serif;
+ }
+
+ .title-cam {
+     display: flex;
+ }
+
+ header .title-cam img {
+     width: 6rem;
+     opacity: 0.2;
+ }
+
+ header .icono-redes {
+     display: flex;
+     gap: 2rem;
+ }
+
+ header .icono-redes img {
+     width: 2rem;
+     height: auto;
+ }
+
+
+ /* Estilos base */
+ .nav {
+     background: #222;
+ }
+
+ .nav nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .nav ul {
+     list-style: none;
+     display: flex;
+     gap: 15px;
+     margin: 0;
+     padding: 0;
+ }
+
+ .nav a {
+     text-decoration: none;
+     color: white;
+     padding: 10px;
+     display: block;
+ }
+
+ nav a:hover {
+     color: #2563eb;
+ }
+
+ /* Botón hamburguesa */
+ .menu-hamburguesa {
+     display: none;
+     font-size: 28px;
+     background: none;
+     border: none;
+     color: white;
+     cursor: pointer;
+ }
+
+
+ @media (max-width: 768px) {
+     .menu-hamburguesa {
+         display: block;
+     }
+
+     .nav ul {
+         display: none;
+         flex-direction: column;
+         background: #333;
+         width: 100%;
+     }
+
+     .nav ul.show {
+         display: flex;
+     }
+ }
+
+
+ .search-container {
+     display: flex;
+     width: 37rem;
+     background: #f3f4f6;
+     padding: 0.35rem 0.75rem;
+     border-radius: 2rem;
+     border: 1px solid #d1d5db;
+     justify-content: space-between;
+     margin-left: 17px;
+ }
+
+ .search-container input {
+     border: none;
+     outline: none;
+     background: transparent;
+     font-size: 0.95rem;
+     padding: 0.25rem;
+     width: 100%;
+ }
+
+ .search-container button {
+     border: none;
+     background: none;
+     cursor: pointer;
+     color: #374151;
+     font-size: 1rem;
+     margin-left: 0.5rem;
+     transition: color 0.2s ease;
+ }
+
+ .search-container button:hover {
+     color: #2563eb;
+ }
+
+ img {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ /* Contenedor principal de los links */
+ .main-nav {
+     display: flex;
+     gap: 20px;
+     align-items: center;
+     font-family: Arial, sans-serif;
+     margin-left: 20px;
+ }
+
+ .main-nav a {
+     font-weight: bold;
+     text-decoration: none;
+     color: #ca1717;
+     padding: 10px;
+ }
+
+ header .main-nav .list-down button {
+     color: #ca1717;
+ }
+
+ .separador {
+     width: 100%;
+     height: 46px;
+     background-color: #9b0404;
+     margin: 7px 0;
+ }
+
+ .swiper {
+     width: 100%;
+     height: 159px;
+     background-color: #eeeeee;
+ }
+
+ .swiper .swiper-slide {
+     padding: 2px;
+ }
+
+ .swiper .swiper-slide img {
+     max-height: 100%;
+     object-fit: contain;
+     cursor: pointer;
+ }
+
+ .list-down {
+     position: relative;
+     display: inline-block;
+ }
+
+ .listbtn {
+     cursor: pointer;
+     font-weight: bold;
+     color: #333;
+     padding: 10px;
+     border: none;
+     background: none;
+     font-size: 16px;
+ }
+
+ .list-down-content {
+     display: none;
+     position: absolute;
+     background-color: white;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 10;
+     border-radius: 6px;
+ }
+
+ .list-down-content a {
+     color: #333;
+     padding: 10px 14px;
+     text-decoration: none;
+     display: block;
+ }
+
+ .list-down-content a:hover {
+     background-color: #f1f1f1;
+ }
+
+ /* Hover en escritorio */
+ .list-down:hover .list-down-content {
+     display: block;
+ }
+
+ /* Mostrar con clic en móvil */
+ .list-down.show .list-down-content {
+     display: block;
+ }
+
+ .btn {
+     padding: 0.85rem 1.75rem;
+     font-size: 1rem;
+     font-weight: 600;
+     border: none;
+     border-radius: 0.5rem;
+     cursor: pointer;
+     transition: background 0.3s ease, transform 0.2s ease;
+ }
+
+ .btn-primary {
+     background: #2563eb;
+     color: #fff;
+ }
+
+ .btn-primary:hover {
+     background: #1d4ed8;
+     transform: translateY(-2px);
+ }
+
+
+ .swiper-slide img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ footer .cam-inf {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ footer .cam-inf h1 {
+     font-size: 1rem;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     margin-bottom: 1rem;
+     color: #9b0404;
+ }
+
+ footer .cam-inf img {
+     width: 8rem;
+     height: auto;
+     opacity: 0.3;
+ }
+
+ .mapa-section {
+     text-align: center;
+     margin: 40px 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+ }
+
+ .mapa-section .textMap p {
+     width: 30rem;
+     font-size: 2rem;
+     color: #9b0404;
+ }
+
+ .mapa-section .textMap {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .mapa-section .textMap img {
+     width: 8rem;
+     height: auto;
+     opacity: 0.3;
+ }
+
+ .mapa-container {
+     position: relative;
+     display: inline-block;
+ }
+
+ .mapa {
+     max-width: 500px;
+     width: 100%;
+ }
+  .pin {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Tooltip */
+.pin::after {
+  content: attr(data-titulo);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+.pin::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.pin:hover::after,
+.pin:hover::before {
+  opacity: 1;
+}
+
+
+ .mapa-resultados {
+     margin-top: 20px;
+     padding: 15px;
+     border: 1px solid #ddd;
+     border-radius: 6px;
+     max-width: 500px;
+     margin-left: auto;
+     margin-right: auto;
+     background: #fafafa;
+ }
+
+ .detalle-pelicula {
+     display: none;
+     min-height: 70vh;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 20px;
+     gap: 15px;
+ }
+
+ .detalle-pelicula img {
+     max-width: 400px;
+     border-radius: 10px;
+     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+ }
+
+ .detalle-pelicula h3 {
+     font-size: 2rem;
+     margin-bottom: 10px;
+ }
+
+ .detalle-pelicula .poster {
+     display: flex;
+     flex-direction: column;
+     width: 300px;
+     height: auto;
+ }
+
+
+ .detalle-pelicula .contenido {
+     display: flex;
+     gap: 2rem;
+     width: 100%;
+     justify-content: center;
+
+ }
+
+ .detalle-pelicula .contenido .trailer-text {
+     display: flex;
+     flex-direction: column;
+     max-width:800px; 
+     margin:20px auto;
+ }
+
+  .detalle-pelicula .contenido .trailer-text p {
+    text-align: justify;
+    width: 100%;
+    margin-top: 1rem;
+ }
+
+ #home {
+     margin-top: 20px;
+     padding: 10px 20px;
+     background: #333;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+ }
+
+ #home:hover {
+     background: #555;
+ }
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 24px;
+        width: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .mapa-section .textMap p {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .detalle-pelicula .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header .icono-redes {
+        margin-top: 0.5rem;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .mapa-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mapa {
+        max-width: 100%;
+    }
+
+    .detalle-pelicula .contenido {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .detalle-pelicula img {
+        max-width: 90%;
+    }
+
+    .detalle-pelicula h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    .mapa-section .textMap p {
+        font-size: 1.2rem;
+    }
+
+    footer .cam-inf h1 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .btn {
+        padding: 0.65rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+#detalle-lugar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.galeria {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.galeria img {
+    width: 30rem;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 31rem;
+}
+
+#detalle-lugar #texto-lugar{
+        font-size: 20px;
+        padding: 3px;
+}
+#detalle-lugar #titulo-lugar{
+        font-size: 40px;
+}
+
+#btnVolverMapa{
+    width: 10rem;
+    height: 2rem;
+    border-radius: 34px;
+    background: #9b040470;
+    cursor: pointer;
+}
+

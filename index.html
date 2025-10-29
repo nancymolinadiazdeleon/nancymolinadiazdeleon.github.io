@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escenarios del cine en la CDMX</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="title-cam">
+      <h1>Escenarios del cine en la <span>CDMX</span></h1>
+      <img src="assets/picture/cam2.png" alt="" />
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar..." />
+      <button onclick="buscar()">🔍</button>
+    </div>
+    <nav class="main-nav">
+      <a href="#">INICIO</a>
+
+      <div class="list-down">
+        <button class="listbtn">PELICULAS ⌄</button>
+        <div class="list-down-content">
+          <a href="#" data-category="todas">Amores perros</a>
+          <a href="#" data-category="drama">El ángel exterminador</a>
+          <a href="#" data-category="comedia">Godzilla</a>
+          <a href="#" data-category="romance">Licencia para matar</a>
+          <a href="#" data-category="accion">Roma</a>
+          <a href="#" data-category="terror">Romeo + Julieta</a>
+          <a href="#" data-category="clasicos">Spectre</a>
+          <a href="#" data-category="internacional">Vengador del futuro</a>
+        </div>
+      </div>
+    </nav>
+
+    <di class="icono-redes">
+      <a href="https://www.instagram.com/"><img src="instagram.png" alt="instagram" /></a>
+      <a href="https://www.facebook.com/"><img src="facebook.png" alt="facebook" /></a>
+      <a href="https://x.com/?lang=es"><img src="x.png" alt="x" /></a>
+    </di>
+  </header>
+  <div class="separador"></div>
+  <!--     <div class="cinta">
+        <img src="assets/picture/cinta.png" alt="cinta de película">
+    </div> -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="amores-perros-poster.jpg" alt="Amores perros" />
+      </div>
+      <div class="swiper-slide">
+        <img src="angel-exterminador.png" alt="El ángel exterminador" />
+      </div>
+      <div class="swiper-slide">
+        <img src="Casa-filmacion.png" alt="El ángel exterminador" />
+      </div>
+      <div class="swiper-slide">
+        <img src="la casa donde se filmó el ángel exterminador.jpg" alt="El ángel exterminador" />
+      </div>
+      <div class="swiper-slide">
+        <img src="mapa-ubicacion-angel.png" alt="El ángel exterminador" />
+      </div>
+      <div class="swiper-slide">
+        <img src="godzilla-poster.png" alt="Godzilla" />
+      </div>
+      <div class="swiper-slide">
+        <img src="total-recall-poster.png" alt="Vengador del futuro" />
+      </div>
+      <div class="swiper-slide">
+        <img src="roma-poster.png" alt="Roma" />
+      </div>
+      <div class="swiper-slide">
+        <img src="R-J-poster.png" alt="Romeo + Julieta" />
+      </div>
+      <div class="swiper-slide">
+        <img src="Spectre-poster.png" alt="Spectre" />
+      </div>
+      <div class="swiper-slide">
+        <img src="total-recall-poster.png" alt="Vengador del futuro" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 1,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <section class="mapa-section" id="map-section">
+    <div class="textMap">
+      <p>
+        La Ciudad de México ha sido escenario de muchas películas nacionales e
+        internacionales. Te invitamos a explorar algunos de los lugares que
+        han sido escenarios del cine.
+      </p>
+      <img src="cam2.png" alt="" />
+    </div>
+    <div class="mapa-container">
+      <img src="mapa.png" alt="Mapa CDMX" class="mapa" />
+
+      <div class="pin" style="top: 24%; left: 46%" data-lugar="zona1" data-titulo="Spectre"></div>
+      <div class="pin" style="top: 29%; left: 50%" data-lugar="zona2" data-titulo="Godzilla"></div>
+      <div class="pin" style="top: 35%; left: 60%" data-lugar="zona3" data-titulo="Roma"></div>
+      <div class="pin" style="top: 43%; left: 66%" data-lugar="zona4" data-titulo="Vengador del Futuro"></div>
+      <div class="pin" style="top: 47%; left: 49%" data-lugar="zona5" data-titulo="Romeo y Julieta"></div>
+      <div class="pin" style="top: 54%; left: 77%" data-lugar="zona6" data-titulo="Amores perros"></div>
+
+    </div>
+  </section>
+
+  <div id="detalle-lugar" style="display:none;">
+  <button id="btnVolverMapa">Volver al mapa</button>
+  <h2 id="titulo-lugar"></h2>
+  <p id="texto-lugar"></p>
+  
+  <div id="galeria-lugar" class="galeria"></div>
+</div>
+
+
+  <div class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="amores-perros-poster.jpg" alt="Amores perros" />
+      </div>
+      <div class="swiper-slide">
+        <img src="angel-exterminador.png" alt="El ángel exterminador" />
+      </div>
+      <div class="swiper-slide">
+        <img src="godzilla-poster.png" alt="Godzilla" />
+      </div>
+      <div class="swiper-slide">
+        <img src="total-recall-poster.png" alt="Vengador del futuro" />
+      </div>
+      <div class="swiper-slide">
+        <img src="roma-poster.png" alt="Roma" />
+      </div>
+      <div class="swiper-slide">
+        <img src="R-J-poster.png" alt="Romeo + Julieta" />
+      </div>
+      <div class="swiper-slide">
+        <img src="Spectre-poster.png" alt="Spectre" />
+      </div>
+    </div>
+  </div>
+  <script>
+    var swiper = new Swiper(".mySwiper2", {
+      slidesPerView: 3,
+      spaceBetween: 1,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <section id="detalle-pelicula" class="detalle-pelicula" style="display: none">
+    <!-- Contenedor de player trailer -->
+    <div class="contenido"></div>
+    <button id="home">Volver al contenido</button>
+  </section>
+
+  
+  <footer>
+    <div class="cam-inf">
+      <img src="cam2.png" alt="" />
+      <h1>ESCENARIOS DEL CINE EN LA CDMX</h1>
+    </div>
+  </footer>
+<script src="main.js"></script>
+</body>
+
+</html>
